@@ -3,4 +3,12 @@ by using Newton’s algorithm. Newton’s approach is an iterative guessing algo
 is n/2 and each subsequent guess is computed using the formula: 
 newguess = (1/2) * (oldguess + (n/oldguess)).'''
 
-# I couldn't do this exercise.
+def mySqrt (n):
+    og = n/2
+    for i in range(10):
+        ng = (1/2) * (og + (n / og))
+        og = ng
+    return ng
+
+sqrt = mySqrt(130)
+print(sqrt)
